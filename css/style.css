@@ -14,6 +14,9 @@ h1,h2,h3,h4,h5,h6{
 a,a:hover{
 	text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /**************************************************************
        ************  header section start*****************
@@ -26,7 +29,7 @@ a,a:hover{
  
 }
 .bg-light {
-    background-color: transparent !important;
+    background-color: transparent;
 }
 .navbar-light .navbar-nav .active > .nav-link{
 	font-size: 20px;
@@ -437,3 +440,157 @@ a,a:hover{
 /**************************************************************
        ************ footer section end*****************
 **************************************************************/
+/*******css media qury*********/
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbar-light .navbar-nav .active > .nav-link:hover {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 145px;
+    color: #ff6a6d;
+    background: black;
+    width: 100%;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff6a6d;
+    font-size: 20px;
+    font-weight: 600;
+    background: black;
+}
+.banner-inner h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: -95px;
+}
+.banner-inner p {
+    font-size: 10px;
+    font-weight: 300;
+    color: #a3a4a4;
+    margin-left: -95px;
+}
+.banner {
+    width: 100%;
+    padding: 112px 0px;
+}
+.div-btn .btn-info {
+    color: #fff;
+    background-color: #ff6a6d;
+    border: 1px solid #ff6a6d;
+    border-radius: 20px;
+    padding: 8px 40px;
+    margin-left: -126px;
+}
+.top-section h1 {
+    font-size: 31px;
+    font-weight: 700;
+}
+.about-inner h3 {
+    font-size: 31px;
+    font-weight: 700;
+    margin-top: 108px;
+}
+.text-inner h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.text-section {
+    width: 100%;
+   
+}
+.text-inner img {
+    
+    width: 300px;
+}
+.class-inner h1 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: -234px;
+}
+.class-end p {
+    font-size: 11px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #a3a4a4;
+    text-align: right;
+    margin-right: -53px;
+}
+.class-end a {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 97px;
+}
+
+}
+  /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+.banner-inner h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-left: -105px;
+}
+.banner-inner p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #a3a4a4;
+    margin-left: -98px;
+}
+.div-btn .btn-info {
+    color: #fff;
+    background-color: #ff6a6d;
+    border: 1px solid #ff6a6d;
+    border-radius: 20px;
+    padding: 8px 40px;
+    margin-left: -45px;
+}
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  
+}
+
+
+
+
+  
+}
+
+
+/*****stickup css code******/
+.isStuck{
+    left:0px;
+    width:100%;
+    background: #aaaa;
+    
+}
+
+.navbar-wrapper {
+    margin-top: 0px;
+    position: relative;
+    z-index: 15;
+    width: 100%;
+    background: rebeccapurple;
+}
+/****scroll btn css****/
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:block;
+}
+
