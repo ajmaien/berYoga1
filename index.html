@@ -21,7 +21,7 @@
   <body>
     <!--header section start-->
     <header class="header-section wow bounceInUp">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light header-menu ">
        <div class="container">
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="">
@@ -72,8 +72,10 @@
                 <div class="banner-inner wow slideInLeft">
                   
                   <h1>Beautiful videos. Become <br>your best self with Ber- <br>YoGa.</h1>
-                  <p>For me, BerYoga is more than just a sport – it is lifestyle, a state <br>mind, a philosophy. <br>
+                  <p class="web">For me, BerYoga is more than just a sport – it is lifestyle, a state <br>mind, a philosophy. <br>
                   Now I decided to open BerYoga so that I can share my love and <br>joy of bikram yoga.  It is my hope that you too can discover all <br>the positive impacts of bikram yoga and make bikram yoga as a <br>part of your life.</p>
+                  <p  class="responsive">For me, BerYoga is more than just a sport – it is lifestyle, a state mind, a philosophy.
+                  Now I decided to open BerYoga so that I can share my love and joy of bikram yoga.  It is my hope that you too can discover all the positive impacts of bikram yoga and make bikram yoga as a part of your life.</p>
                   <div class="div-btn wow slideInRight">
                     <a href="#" class="btn btn-info  wow slideInLeft">Service</a>
                     <a href="#" class="btn btn-primary wow slideInRight">Sign up</a>
@@ -178,7 +180,8 @@
             <h6>By Brittany Risherjan _____</h6>
             <h1>The Healing Power of <br>Trauma-Informed Yoga  <br>Classes.</h1>
             <div class="text-end">
-              <p>Celebrating five years of service, the nonprofit <br>Exhale to Inhale brings free, trauma-informed yoga <br>classes to rape crisis centers and domestic violence <br>shelters in Jakarta.</p>
+              <p class="web">Celebrating five years of service, the nonprofit <br>Exhale to Inhale brings free, trauma-informed yoga <br>classes to rape crisis centers and domestic violence <br>shelters in Jakarta.</p>
+              <p class="responsive">Celebrating five years of service, the nonprofit Exhale to Inhale brings free, trauma-informed yoga classes to rape crisis centers and domestic violence shelters in Jakarta.</p>
               <a href="#">Read More <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
@@ -206,8 +209,10 @@
             
             <h1>5 Ways to Make Every Yoga <br>Class More Restorative and <br>Therapeutic</h1>
             <div class="class-end">
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In part four of our series on teaching trauma-sensitive yoga, teacher <br>Daniel Sernicola shares five practices to help your students get grounded <br>and cultivate mindfulness.  <br>  
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teachers, need liability insurance? As a TeachersPlus member, you can access low-cost coverage and more than a dozen valuable benefits that will build your skills and business. Enjoy a free subscription to YJ, a free profile on our national directory, exclusive webinars and content packed with advice, discounts on educational resources and gear, and <br>more.</p>
+              <p class="web">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In part four of our series on teaching trauma-sensitive yoga, teacher <br>Daniel Sernicola shares five practices to help your students get grounded <br>and cultivate mindfulness.  <br>  
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teachers, need liability insurance? As a TeachersPlus member, you can access low-cost coverage and more than a dozen valuable benefits that will build your skills and business. Enjoy a free subscription to YJ, a free profile on our national directory, exclusive webinars and content packed with advice, discounts on educational resources and gear, and <br>more.</p>
+              <p class="responsive">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In part four of our series on teaching trauma-sensitive yoga, teacher Daniel Sernicola shares five practices to help your students get grounded and cultivate mindfulness.   
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teachers, need liability insurance? As a TeachersPlus member, you can access low-cost coverage and more than a dozen valuable benefits that will build your skills and business. Enjoy a free subscription to YJ, a free profile on our national directory, exclusive webinars and content packed with advice, discounts on educational resources and gear, and more.</p>
               <a href="#">Read More <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
@@ -357,9 +362,9 @@
            <div class="copyright text-center wow jackInTheBox">
                      <h6>Copyright © 2020 BerYoga All rights reserved.</h6>
                    </div>
-                   
+         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up"></i></button>          
      </section>
-     <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><i class="fa fa-arrow-up"></i></a>
+    
 
 <!-- footer section code end-->
 
@@ -369,21 +374,42 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/stickUp.min.js"></script>
+    
+    <script src="js/jquery.sticky.js"></script>
      <script src="js/wow.min.js"></script>
               <script>
                 new WOW().init();
-              </script>
-    <script type="text/javascript">
-              //initiating jQuery
-              jQuery(function($) {
-                $(document).ready( function() {
-                  //enabling stickUp on the '.navbar-wrapper' class
-                  $('.navbar-wrapper').stickUp();
-                });
-              });
 
-            </script>
+
+                $(document).ready(function(){
+    $(".header-menu").sticky({topSpacing:0,'zIndex' : "15",});
+  });
+
+
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+
+              </script>
+   
   </body>
 </html>

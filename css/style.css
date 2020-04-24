@@ -16,6 +16,7 @@ a,a:hover{
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /**************************************************************
@@ -110,6 +111,12 @@ html {
 .banner {
     width: 100%;
     padding: 267px 0px;
+}
+.banner .web{
+    display: block;
+}
+.banner .responsive{
+    display: none;
 }
 .banner-inner {
     width: 100%;
@@ -245,6 +252,12 @@ html {
 	width: 100%;
 	padding: 80px 0px;
 }
+.text-section .web{
+    display: block;
+}
+.text-section .responsive{
+    display: none;
+}
 .text-inner h6 {
     color: #a3a4a4;
     margin-top: 140px;
@@ -286,6 +299,12 @@ html {
     
 	background: url(../images/banner0.png)center top no-repeat;
 	background-size: cover;
+}
+.class-section .web{
+    display: block;
+}
+.class-section .responsive{
+    display: none;
 }
 
 .class-inner {
@@ -565,11 +584,11 @@ html {
     margin-top: -234px;
 }
 .class-end p {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 18px;
     font-weight: 300;
     color: #a3a4a4;
-    text-align: right;
+    text-align: left;
     margin-right: -53px;
 }
 .class-end a {
@@ -577,6 +596,19 @@ html {
     font-weight: 400;
     margin-left: 97px;
 }
+.class-section .web{
+    display: none;
+}
+.class-section .responsive{
+    display: block;
+}
+#myBtn {
+    bottom: 8px;
+    right: 2px;
+    padding: 10px;
+    font-size: 21px;
+}
+
 
 }
   /* 
@@ -611,6 +643,26 @@ html {
     padding: 8px 40px;
     margin-left: -45px;
 }
+
+.class-section .web{
+    display: none;
+}
+.class-section .responsive{
+    display: block;
+}
+.class-end p {
+    
+    margin-left: 30px;
+}
+.class-end a {
+    
+    margin-left: 32px;
+}
+#myBtn {
+   
+    right: 12px;
+    
+}
   
 }
 
@@ -629,31 +681,41 @@ html {
     margin-right: 20px;
     text-align: right;
 }
+.banner,.text-section,.class-section,.web{
+    display: none;
+}
+.banner,.text-section,.class-section,.responsive{
+    display: block;
+}
 
 }
 
 
-/*****stickup css code******/
-.isStuck{
-    left:0px;
-    width:100%;
-    background: #aaaa;
-    
-}
-
-.navbar-wrapper {
-    margin-top: 0px;
-    position: relative;
-    z-index: 15;
+/*****sticky css code******/
+.is-sticky .header-menu{
+    background: #52C5A4 !important;
+    padding: 10px 0px;
+    transition: 1s;
     width: 100%;
-    background: rebeccapurple;
 }
 /****scroll btn css****/
-.back-to-top {
-    cursor: pointer;
+#myBtn {
+    display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    display:block;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #4267B2;
+    color: white;
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 23px;
 }
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+  
 
